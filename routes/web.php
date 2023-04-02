@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,11 @@ Route::get('/{slug?}', function ($slug = 'home') {
 
     return view('index', ['story' => (object) $data['story']]);
 });
+Route::post('/_storyblok/', function (Request $request) {
+    $story = $request->story;
+
+    return view('components/page')->with('blok', $story['content']);
+})->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
 Route::get('/welcome', function () {
     return view('welcome');
