@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{slug?}', function ($slug = 'home') {
+    $storyblok = new \Storyblok\Client(config('storyblok.api_key'));
+    $storyblok->editMode(); // always enable draft mode
+    $data = $storyblok->getStoryBySlug($slug)->getBody();
+
+    return view('index', ['story' => (object) $data['story']]);
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
