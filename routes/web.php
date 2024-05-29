@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/{slug?}', function ($slug = 'home') {
-    $storyblok = new \Storyblok\Client(config('storyblok.api_key'));
+    $storyblok = new \Storyblok\Client(
+        apiKey: config('storyblok.api_key'),
+        apiRegion: 'us'
+    );
     $storyblok->editMode(); // always enable draft mode
     $data = $storyblok->getStoryBySlug($slug)->getBody();
 
