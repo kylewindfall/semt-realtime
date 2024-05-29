@@ -1,0 +1,66 @@
+// Pull in any fonts or icon libraries
+
+// Windfall Fonts - Adobe
+@import url("https://use.typekit.net/sxs0pyx.css");
+
+// Ionicons
+@import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+.icon, .-icon {
+  font-family: 'Ionicons';
+}
+
+// Pull in Colors Here
+@import "colors";
+@import "shades";
+
+// Required Color Variables Here
+@primary: @red;
+@accent: @red-800;
+
+@light: @gray-100;
+@dark: @charcoal;
+@black: black;
+@white: white;
+@link: @red;
+@hover: @accent;
+@warning: @yellow;
+@danger: @red;
+@success: @green;
+
+// Device Settings
+@desktop: '(min-width: 1024px)';
+@mobile: '(max-width: 1024px)';
+
+
+// Fonts
+.main-font, .-main-font {
+    font-family: trade-gothic-next, sans-serif;
+}
+
+.-cond {
+    font-family: trade-gothic-next-condensed, sans-serif;
+}
+
+.serif, .-serif {
+    font-family: aleo, sans-serif;
+}
+
+.display, .-display {
+    font-family: brothers, sans-serif;
+	font-weight: 700;
+}
+
+body {
+  .-main-font;
+}
+
+// set to true to choose font ratio
+@minor-second: false;
+@major-second: false;
+@minor-third: true;
+@major-third: false;
+@perfect-fourth: false;
+@augmented-fourth: false;
+@perect-fifth: false;
+@golden-ratio: false;

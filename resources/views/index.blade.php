@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $story->name }}</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body class="antialiased">
@@ -22,7 +23,7 @@
 
         const sendStory = async function(event) {
             const response = await fetch(
-                'https://laravel-storyblok-realtime.test/_storyblok/', {
+                'https://southeast.windfall.dev/_storyblok/', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

@@ -1,0 +1,126 @@
+.st0 {
+    fill: white;
+}
+
+header {
+    a {
+        .-dark;
+
+        &:hover {
+            .-red;
+        }
+    }
+
+    .logo {
+        img {
+            width: 70%;
+        }
+    }
+}
+
+nav {
+    ul {
+        .-flex;
+        .-flex-align-center;
+        .-space-between;
+
+        li {
+            .-inline-block;
+            .-margin-horizontal-10;
+
+            a {
+                .-caps;
+                .-weight-700;
+            }
+        }
+    }
+}
+
+.social {
+    ul {
+        .-flex;
+        .-flex-align-center;
+        .-space-between;
+
+        li {
+            .-inline-block;
+            .-margin-horizontal-10;
+
+            a {
+                .-caps;
+                .-inline-block;
+                .-size-125;
+
+                &.search {
+                    .-flex-center;
+                    .-red;
+                    .-cream-bg;
+                    .-circle;
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    .-relative;
+    width: 100vw;
+    height: 80vh;
+
+    video {
+        .-absolute-all;
+        height: 100%;
+        width: 100%;
+        .-object-cover;
+    }
+
+    .overlay {
+        .-absolute-all;
+        .-flex-center;
+        /** background: rgba(0,0,0,.5); **/
+
+        h1 {
+            .-display;
+            .-black;
+            .-size-300;
+        }
+
+        a {
+            .-flex-center;
+            .-vertical;
+            .-size-100;
+            .-weight-700;
+            .-white;
+            .-align-center;
+
+            span.cta {
+                .-inline-block;
+                .-caps;
+                margin-top: 40px;
+\                .-white;
+                .-red-bg;
+                padding: 10px 20px;
+\            }
+
+            i {
+                .-flex-center;
+                .-transition;
+                height: 60px;
+                width: 60px;
+                .-margin-top;
+                .-circle;
+            }
+
+            &:hover {
+                i {
+                    .-white-bg;
+                    .-shadow;
+                    .-primary;
+
+                }
+            }
+        }
+    }
+}
